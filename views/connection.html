@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="./style.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<style> 
+body{
+	background-color: #e7edee;
+}
+		/* Card styles */ 
+		.card{ 
+			background-color: #fff; 
+			height: auto; 
+			width: auto; 
+			overflow: hidden; 
+			margin: 12px; 
+			border-radius: 5px; 
+			box-shadow: 9px 17px 45px -29px 
+						rgba(0, 0, 0, 0.44); 
+		} 
+	
+		/* Card image loading */ 
+		.card__image img { 
+			width: 100%; 
+			height: 100%; 
+		} 
+		
+		.card__image.loading { 
+			height: 300px; 
+			width: 400px; 
+		} 
+	
+		/* Card title */ 
+		.card__title { 
+			padding: 8px; 
+			font-size: 22px; 
+			font-weight: 700; 
+		} 
+		
+		.card__title.loading { 
+			height: 1rem; 
+			width: 50%; 
+			margin: 1rem; 
+			border-radius: 3px; 
+		} 
+	
+		/* Card description */ 
+		.card__description { 
+			padding: 8px; 
+			font-size: 16px; 
+		} 
+		
+		.card__description.loading { 
+			height: 3rem; 
+			margin: 1rem; 
+			border-radius: 3px; 
+		} 
+	
+		/* The loading Class */ 
+		.loading { 
+			position: relative; 
+			background-color: #e2e2e2; 
+		} 
+	
+		/* The moving element */ 
+		.loading::after { 
+			display: block; 
+			content: ""; 
+			position: absolute; 
+			width: 100%; 
+			height: 100%; 
+			transform: translateX(-100%); 
+			background: -webkit-gradient(linear, left top, 
+						right top, from(transparent), 
+						color-stop(rgba(255, 255, 255, 0.2)), 
+						to(transparent)); 
+						
+			background: linear-gradient(90deg, transparent, 
+					rgba(255, 255, 255, 0.6), transparent); 
+	
+			/* Adding animation */ 
+			animation: loading 0.8s infinite; 
+		} 
+	
+		/* Loading Animation */ 
+		@keyframes loading { 
+			100% { 
+				transform: translateX(100%); 
+			} 
+		} 
+		*{
+			margin: 0;
+			padding: 0%;
+		}#heading{
+			display: flex;
+		}
+		#nav{
+			display: block;
+			width: 85vw;
+			height: 63px;
+			margin-right: auto;
+			margin-left: auto;
+			background-color:#b06ab3;
+		
+    width: 85vw;
+    position: absolute;
+    height: 63px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #b06ab3;
+    top: 0%;
+    left: 14%;
+		}
+		#hamb{
+			    display: flex;
+    margin-right: 0%;
+flex-direction: column;
+position: fixed;
+   
+	width: 13vw;
+	height: 100vh;
+	background-color: #191919;
+		}
+#hamb h3{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3em;
+	    color: #fff;
+}		#hambtext{
+	    width: 100%;
+    display: flex;
+    height: 62px;
+	color: #fff;
+}
+#slider{
+	color: #fff;
+	
+}
+#slider ul{
+    display: flex;
+    flex-direction: column;
+}
+/*li{
+	height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -7%;
+    background: #b06ab3;
+    margin-top: 1.2%;
+    font-size: 1.5em;
+	cursor: pointer;
+}
+li:hover{
+	background-color: black;
+	transform: scale(1);
+
+}*/
+#buttons{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: flex-end;
+	align-items: center;display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end ;align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    margin-left: -1%;
+
+    margin-top: -36px;
+margin-top: -68px;
+}.container{
+	    margin-top: 1%;    margin-top: 1%;
+		background-color: transparent;
+}
+.fa{
+	    font-size: 41px;
+    cursor: pointer;
+    color: darkgray;
+    filter: opacity(0.5);
+}.fa:hover{
+	filter: brightness(0.5);
+}
+@media (min-width: 992px)
+{
+.col-md-4 {
+    width: 26.333333%;
+}}
+.fa-user{
+	margin-left: 2%;
+	    margin: 0% 2%;
+}
+
+#center{
+	    
+    border: 2px solid transparent;
+    background: #fff;
+    margin-top: 1%;
+    height: 84vh;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    margin-left: 1%;
+    width: 97%;
+}
+.image{
+    height: 6em;
+    width: 6em;
+    border: 2px solid transparent;
+    border-radius: 100%;
+}
+body{
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+h5{
+  margin-top: 0%;
+    color: darksalmon;
+    text-align: center;
+    margin-left: -10%;
+    font-size: 85%;
+}
+
+
+body {
+     margin: 0;
+    background: #f0f0f0;
+}
+ .container {
+     height: 100vh;
+     display: flex;
+     flex-flow: wrap row;
+     justify-content: center;
+     align-items: center;
+}
+ .box{
+     max-width: 300px;
+     width: 100%;
+     padding: 0 15px;
+}
+ .skeleton {
+     padding:15px;
+     max-width: 300px;
+     width: 100%;
+     background: #fff;
+     margin-bottom: 20px;
+     border-radius: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+ .skeleton .square {
+     height: 80px;
+     border-radius: 5px;
+     background: rgba(130, 130, 130, 0.2);
+     background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+     background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+     background-size: 800px 100px;
+     animation: wave-squares 2s infinite ease-out;
+}
+ .skeleton .line {
+     height: 12px;
+     margin-bottom:6px;
+     border-radius: 2px;
+     background: rgba(130, 130, 130, 0.2);
+     background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+     background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+     background-size: 800px 100px;
+     animation: wave-lines 2s infinite ease-out;
+}
+ .skeleton-right{
+    flex:1;
+}
+ .skeleton-left{
+    flex:2;
+    padding-right:15px;
+}
+ .flex1{
+    flex: 1;
+}
+ .flex2{
+    flex: 2;
+}
+ .skeleton .line:last-child{
+    margin-bottom: 0;
+}
+ .h8{
+    height: 8px !important;
+}
+ .h10{
+    height: 10px !important;
+}
+ .h12{
+    height: 12px !important;
+}
+ .h15{
+    height: 15px !important;
+}
+ .h17{
+    height: 17px !important;
+}
+ .h20{
+    height: 20px !important;
+}
+ .h25{
+    height: 25px !important;
+}
+ .w25{
+    width: 25% !important
+}
+ .w40{
+    width:40% !important;
+}
+ .w50{
+    width: 50% !important
+}
+ .w75{
+    width: 75% !important
+}
+ .m10{
+    margin-bottom: 10px !important;
+}
+ .circle{
+    border-radius: 50% !important;
+     height: 80px !important;
+     width: 80px;
+}
+ @keyframes wave-lines {
+    0% {
+        background-position: -468px 0;
+    }
+     100% {
+        background-position: 468px 0;
+    }
+}
+ @keyframes wave-squares {
+    0% {
+        background-position: -468px 0;
+    }
+     100% {
+        background-position: 468px 0;
+    }
+}
+
+</style>
+</head>
+<body>
+    
+
+    <div id="heading">
+        <div id="hamb" style="
+        background: white;
+    ">
+            
+            <div style="
+            height: 66px;
+            background: #fff;
+            padding: 0 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        "> 
+                        <a href="#" style="
+            color: inherit;
+            text-decoration: inherit;
+        ">
+                            <img src="assets/images/logo.png">
+                            <img src="assets/images/logo-light.png" class="logo_inverse">
+                        </a>
+                        <!-- btn night mode -->
+                        <a href="#" id="night-mode" class="btn-night-mode" data-tippy-placement="left" data-tippy="" data-original-title="Switch to dark mode"></a>
+                    </div>
+                    
+                    <div>
+                        
+                    
+                    <div class="">
+                        <div class="" style="
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    ">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ-YIPLhIBLVQKh_S4BNo18b03Ct5P_iYFeBBjDCYx&amp;s" class="bg-gray-200 border-4 border-white rounded-full w-full h-full" style="
+        /* border: 2px solid pink; */
+        border-radius: 10030px;
+        width: 96px;
+        height: 94px;
+    ">
+                        </div>
+                        <div id="text" style="
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        /* margin-top: 1rem; */
+    "><a href="profile.html" style="
+        text-align: center;
+        margin-top: 0.2rem;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: 1.2em;
+    "> Stella Johnson
+                        </a>
+    </div>
+                        <div style="
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+    ">
+                            <div>
+                                <a href="#">
+                                    <strong>Post</strong>
+                                    <div> 130</div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <strong>Following</strong>
+                                    <div> 1,230</div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <strong>Followers</strong>
+                                    <div> 2,430</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="">
+        </div>
+    
+    
+    
+    <div id="nav">
+        <h1 style=" */
+        /* display: flex; */
+        margin-top: 0%;
+        /* align-items: center; */
+        height: 61%; 
+        justify-content: center;
+        margin-left: 2%;">
+            
+            </h1>
+        
+    <div id="buttons">
+        
+    <i class="fa fa-user " id="users" aria-hidden="true">
+        
+    </i>
+    
+        
+            <a href="/logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>
+        
+    
+    </div>
+    <div id="center">
+        <div class="container">
+
+            <h1>Connections</h1>
+
+            <div class="container">
+                <div class="box">
+             
+                
+            
+            
+                
+            
+            
+            <div class="box">
+             <div class="skeleton">
+                      <div class="skeleton-left flex1">
+                      <div class="square circle"></div>
+                    </div>
+                      <div class="skeleton-right flex2">
+                        <div class="line h17 w40 m10"></div>
+                        <div class="line"></div>
+                        <div class="line h8 w50"></div>
+                        <div class="line  w75"></div>
+                    </div>
+              </div>
+             <div class="skeleton">
+                      <div class="skeleton-left flex1">
+                      <div class="square circle"></div>
+                    </div>
+                      <div class="skeleton-right flex2">
+                        <div class="line h17 w40 m10"></div>
+                        <div class="line"></div>
+                        <div class="line h8 w50"></div>
+                        <div class="line  w75"></div>
+                    </div>
+              </div>
+               <div class="skeleton">
+                      <div class="skeleton-left flex1">
+                      <div class="square circle"></div>
+                    </div>
+                      <div class="skeleton-right flex2">
+                        <div class="line h17 w40 m10"></div>
+                        <div class="line"></div>
+                        <div class="line h8 w50"></div>
+                        <div class="line  w75"></div>
+                    </div>
+              </div>
+            </div>
+            
+            
+            </div>
+            
+            </div>
+       </div>
+       </div>
+       
+    
+
+    
+    
+    </div></div>
+
+</body>
+</html>

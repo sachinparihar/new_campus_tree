@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <title>Document</title>
+
+    <style>
+        /* input{
+            border: 1px solid #d3d5d8 !important;
+    height: 50px;
+    outline: none;
+    padding: 0 20px;
+        } */
+        input{
+            height: 50px;
+    outline: none;
+    padding: 0 20px;
+    width: 100%;
+        }
+
+
+        @media screen and  (min-width: 481px ) and(max-width:768px) { 
+            body{background-color: red; display: none;}
+ .navbar-login{
+    margin-right: 20rem;
+ }
+}
+
+    </style>
+</head>
+<body   class="bg-gray-100 vsc-initialized" style="/* background: rgb(15,23,42); *//* color: #ffff;  */" data-new-gr-c-s-check-loaded="14.1101.0" data-gr-ext-installed="">
+
+    <!-- <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Holy smokes!</strong>
+        <span class="block sm:inline">Something seriously bad happened.</span>
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+          <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+        </span>
+      </div> -->
+
+    <div id="wrapper" class="flex flex-col justify-between h-screen">
+
+        <!-- header-->
+
+        <div class="bg-white py-4 shadow dark:bg-gray-800" style="/* background: rgb(15,23,42); */width: 100%;/* height: 68px; */">
+            <div class="max-w-6xl mx-auto" style="/* margin-left: 0; */margin-right: 0;">
+  
+  
+                <div class="flex items-center lg:justify-between justify-around" style="
+    /* width: 100vw; */
+  ">
+  
+                    <a href="trending.html">
+                        <img src="assets/images/logo.png" alt="" class="w-32">
+                    </a>
+                       <!--Dark mode-->
+                   <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm" style="
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-right: 5%;
+  ">
+                        
+                             -
+                    <!-- <a href="/login" class="py-3 px-4">Register</a> -->
+                        <a href="/login" class="bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Login</a>
+                    </div>
+                    
+  
+                </div>
+            </div>
+        </div>
+        <!-- <div class="bg-white py-4 shadow dark:bg-gray-800" style="/* background: rgb(15,23,42); */">
+            <div class="max-w-6xl mx-auto">
+
+
+                <div class="flex items-center lg:justify-between justify-around">
+
+                    <a href="trending.html">
+                        <img src="assets/images/logo.png" alt="" class="w-32">
+                    </a>
+                       Dark mode-->
+                   <!-- <div class="capitalize flex  lg:block my-2 space-x-3 text-center">
+                        
+                             
+                     <a href="form-login.html" style="color: darkgray;" class="py-3 px-4">Register</a> -->
+                        <!-- <a  href="/login" class="navbar-login bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Login</a>
+                    </div> -->
+<!--                     
+
+                </div>
+            </div>
+        </div> -->
+        
+
+        <!-- Content-->
+
+        <div>
+            <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
+                <h1 class="lg:text-3xl text-xl font-semibold mb-6"> Sign Up</h1>
+                <p class="mb-2 text-black text-lg"> Register to manage your account </p>
+                <form style="color:white" action="./register" method="POST">
+                    <div class="flex lg:flex-row flex-col lg:space-x-2" style="
+">
+                        <!-- <input type="text" id="full_name_field" name="full_name" maxlength="8" placeholder="Full Name" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;padding: 0 20px;border-radius: 4px;"> -->
+                        <input type="text" id="full_name_field" name="full_name" maxlength="20" placeholder="Full Name" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;padding: 0 20px;border-radius: 4px;">
+    
+                        <input type="text" id="user_id_field" name="user_id" maxlength="15" placeholder="User Id" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;padding: 0 20px;">
+                    </div>
+                    <div class="flex lg:flex-row flex-col lg:space-x-2" style="/* width: 102%; */">
+                       <!--add city or college name--> 
+                       <!---Pending..-->
+                       <input type="text" id="city" name="city" placeholder="City" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="/* width: 28rem; */border: 1px solid #d3d5d8 !important;padding: 0 20px;">
+                       <input type="text" id="college" name="college" placeholder="College" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;/* margin-left: 5%; */padding: 0 20px;/* margin-right: 3%; */">
+
+                    </div>
+                    <input type="text" maxlength="50" id="email_field" name="email" placeholder="Email" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;padding: 0 20px;">
+                   
+
+                    <div style="
+    display: flex;
+">
+<input name="password" id="password_field" max="11" type="password" placeholder="Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800 " style="border: 1px solid #d3d5d8 !important;padding: 0 20px;">
+<!--Show password/hide password toogler-->
+    <i id="toogle_password" onclick="show_hide(password_field,toogle_password)" class="fa password_icon fa-eye" aria-hidden="true" style="
+                    /* margin-top: 10px; */
+                    display: flex;
+                    align-items: center;
+                    margin-top: -1px;
+                    /* margin-left: -20px; */
+                    margin-left: -5%;
+                    "></i>
+</div>
+                    <div style="
+    display: flex;
+"><input type="password" id="confirm_password_field" max="11" name="confirm_password" placeholder="Confirm Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800 " style="border: 1px solid #d3d5d8 !important;padding: 0 20px;">
+
+    <i id="toogle_confirm_password" onclick="show_hide(confirm_password_field,toogle_confirm_password)" class="fa password_icon fa-eye-slash" aria-hidden="true" style="
+                    /* margin-top: 10px; */
+                    display: flex;
+                    align-items: center;
+                    margin-top: -1px;
+                    /* margin-left: -20px; */
+                    margin-left: -5%;
+                    "></i>
+</div>
+                    
+                    <button id="submit_button" style="background-color: darkgrey;margin-top: 1%;" type="button" class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Login</button>
+                    <div class="text-center mt-5 space-x-2">
+                        <p class="text-base"> Do you have an account? <a href="form-login.html"> Login </a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+
+        <div class="lg:mb-5 py-3 uk-link-reset">
+            <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
+                <div class="flex space-x-2 text-gray-700 uppercase">
+                    <a href="#"> About</a>
+                    <a href="#"> Help</a>
+                    <a href="#"> Terms</a>
+                    <a href="#"> Privacy</a>
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+    <!--Response-->
+
+    
+
+
+      
+
+
+
+<script>
+
+
+//let toogle_password=document.getElementById("toogle_password");
+//id for input fields
+full_name_field=document.getElementById("full_name_field");
+ user_id_field=document.getElementById("user_id_field");
+ confirm_password_field=document.getElementById("confirm_password_field");
+   password_field=document.getElementById("password_field");
+
+   email=document.getElementById("email_field");
+
+  const button=document.getElementById("submit_button");
+  
+  //function is show and hide password and confirm password
+
+
+  const show_hide=((ele,icon)=>{
+    if(ele.type=="password"){
+      icon.classList.remove("fa-eye");
+	icon.classList.add("fa-eye-slash");
+      ele.type="value";
+    }
+    else 
+    {icon.classList.remove("fa-eye-slash");
+	icon.classList.add("fa-eye");
+    
+      ele.type="password";
+  }
+	
+  });
+//   toogle_password.addEventListener("click",()=>{
+//     click_password(password_field,toogle_password);
+//   });
+
+  //validate email
+
+//conditions in inputs
+//First name should be 2 digit long alphabet and can't be number
+//User Id also should be 2 digit long alphabet and can't be number
+//password and confirm password both are equal
+//password and confirm password should be 3 digit or alphabet 
+//email validation using regex expression
+
+
+  const ValidateEmail=((mail)=> 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))    //regex expression 
+  {
+    return true;
+  }
+  
+    return false;
+});
+
+
+const ValidatePassword=((password)=>{
+if(password.length>3 && password.length<11){   //must be 3 -11 
+return true;
+}
+
+  return false;
+   //must be 3 digit long 
+
+});
+
+
+//validate firstname and User Id
+const ValidateName=((name)=>{
+    if(/^[A-Za-z]+$/.test(name)){
+        if(name.length>2){
+            return true;
+        }
+    
+    }return false;
+})
+
+
+//when user click on submit button
+button.addEventListener("click",()=>{
+
+//check first name and User Id
+
+//function se bhi kr skta tha
+//but 
+if(ValidateName(full_name_field.value)){
+    full_name_field.style.border="2px solid #d3d5d8" ;
+if(ValidateName(user_id_field.value)){
+    user_id_field.style.border="2px solid #d3d5d8" ;
+    if(ValidateEmail(email.value)){
+        email.style.border="2px solid #d3d5d8" ;
+    if(ValidatePassword(password_field.value)){
+        password_field.style.border="2px solid #d3d5d8" ;
+        if(ValidatePassword(confirm_password_field.value)){
+           confirm_password_field.style.border="2px solid #d3d5d8" ;
+          if(confirm_password_field.value==password_field.value){
+            confirm_password_field.style.border="2px solid #d3d5d8" ;
+            password_field.style.border="2px solid #d3d5d8" ;
+            button.type="Submit";
+          }
+            //make button as type submit 
+else{
+    confirm_password_field.style.border="3px solid #FF9494";
+    password_field.style.border="3px solid #FF9494";
+    //border: 3px solid indianred
+    alert("Check confirm password");
+}
+
+        }
+        else{
+            confirm_password_field.style.border="1px solid #FF9494";
+        alert("confirm password should be 4 digit long");
+    }
+    }else{
+        password_field.style.border="1px solid #FF9494"; 
+        alert("password should be 4 digit long");
+    }
+          
+    }else{
+        email.style.border="1px solid #FF9494";
+        alert("Invalid Email");
+    }
+
+}
+else{
+    user_id_field.style.border="3px solud #FF9494";
+    alert("User Id should be 2 digits long or should be a name ");
+}
+}
+else{
+    full_name_field.style.border="2px solid #FF9494" ;
+ alert("First name should be 2 digits long or should be a name");   
+}
+
+})
+
+
+
+const city_api='./city.json';
+let select=document.querySelector('select');
+
+// fetch(city_api).then((data)=>{
+// return data.json();
+// }).then((data)=>{
+//   data.city.forEach(element => {
+//     let ele=document.createElement('option');
+//     ele.innerHTML=element;
+//     select.appendChild(ele);
+//   });
+//   console.log(data.city[10]);
+// }).catch((err)=>{
+// console.log(err);
+// });
+</script>
+
+</body>
+</html>
+
+<script>
+
+
+//let toogle_password=document.getElementById("toogle_password");
+//id for input fields
+full_name_field=document.getElementById("full_name_field");
+ user_id_field=document.getElementById("user_id_field");
+ confirm_password_field=document.getElementById("confirm_password_field");
+   password_field=document.getElementById("password_field");
+
+   email=document.getElementById("email_field");
+
+  const button=document.getElementById("submit_button");
+  
+  //function is show and hide password and confirm password
+
+  const show_hide=((ele,icon)=>{
+    if(ele.type=="password"){
+      icon.classList.remove("fa-eye");
+	icon.classList.add("fa-eye-slash");
+      ele.type="value";
+    }
+    else 
+    {icon.classList.remove("fa-eye-slash");
+	icon.classList.add("fa-eye");
+    
+      ele.type="password";
+  }
+	
+  });
+//   toogle_password.addEventListener("click",()=>{
+//     click_password(password_field,toogle_password);
+//   });
+
+  //validate email
+
+//conditions in inputs
+//First name should be 2 digit long alphabet and can't be number
+//User Id also should be 2 digit long alphabet and can't be number
+//password and confirm password both are equal
+//password and confirm password should be 3 digit or alphabet 
+//email validation using regex expression
+
+
+  const ValidateEmail=((mail)=> 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))    //regex expression 
+  {
+    return true;
+  }
+  
+    return false;
+});
+
+
+const ValidatePassword=((password)=>{
+if(password.length>3 && password.length<11){   //must be 3 -11 
+return true;
+}
+
+  return false;
+   //must be 3 digit long 
+
+});
+
+
+//validate firstname and User Id
+const ValidateName=((name)=>{
+    if(/^[A-Za-z]+$/.test(name)){
+        if(name.length>2){
+            return true;
+        }
+    
+    }return false;
+})
+
+
+//when user click on submit button
+button.addEventListener("click",()=>{
+
+//check first name and User Id
+
+//function se bhi kr skta tha
+//but 
+if(ValidateName(full_name_field.value)){
+    full_name_field.style.border="1px solid #d3d5d8" ;
+if(ValidateName(user_id_field.value)){
+    user_id_field.style.border="1px solid #d3d5d8" ;
+    if(ValidateEmail(email.value)){
+        email.style.border="1px solid #d3d5d8" ;
+    if(ValidatePassword(password_field.value)){
+        password_field.style.border="1px solid #d3d5d8" ;
+        if(ValidatePassword(confirm_password_field.value)){
+           confirm_password_field.style.border="1px solid #d3d5d8" ;
+          if(confirm_password_field.value==password_field.value){
+            confirm_password_field.style.border="1px solid #d3d5d8" ;
+            password_field.style.border="1px solid #d3d5d8" ;
+            button.type="Submit";
+          }
+            //make button as type submit 
+else{
+    confirm_password_field.style.border="3px solid #FF9494";
+    password_field.style.border="3px solid #FF9494";
+    //border: 3px solid indianred
+    alert("Check confirm password");
+}
+
+        }
+        else{
+            confirm_password_field.style.border="1px solid #FF9494";
+        alert("confirm password should be 4 digit long");
+    }
+    }else{
+        password_field.style.border="1px solid #FF9494"; 
+        alert("password should be 4 digit long");
+    }
+          
+    }else{
+        email.style.border="1px solid #FF9494";
+        alert("Invalid Email");
+    }
+
+}
+else{
+    user_id_field.style.border="3px solud #FF9494";
+    alert("User Id should be 2 digits long or should be a name ");
+}
+}
+else{
+    full_name_field.style.border="2px solid #FF9494" ;
+ alert("First name should be 2 digits long or should be a name");   
+}
+
+})
+
+
+
+const city_api='./city.json';
+let select=document.querySelector('select');
+
+// fetch(city_api).then((data)=>{
+// return data.json();
+// }).then((data)=>{
+//   data.city.forEach(element => {
+//     let ele=document.createElement('option');
+//     ele.innerHTML=element;
+//     select.appendChild(ele);
+//   });
+//   console.log(data.city[10]);
+// }).catch((err)=>{
+// console.log(err);
+// });
+</script>
+

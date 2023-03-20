@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+       <style>
+         p{
+           color: white;
+         }
+         #button:hover{
+          background: rgb(15,23,42);
+         }
+       </style>
+<body class="bg-gray-100" style="
+/* background: rgb(15,23,42); */
+/* color: #ffff; */
+">
+
+
+
+  <div id="wrapper" class="flex flex-col justify-between h-screen">
+
+      <!-- header-->
+      <div class="bg-white py-4 shadow dark:bg-gray-800" style="/* background: rgb(15,23,42); */width: 100%;/* height: 68px; */">
+          <div class="max-w-6xl mx-auto" style="/* margin-left: 0; */margin-right: 0;">
+
+
+              <div class="flex items-center lg:justify-between justify-around" style="
+  /* width: 100vw; */
+">
+
+                  <a href="trending.html">
+                      <img src="assets/images/logo.png" alt="" class="w-32">
+                  </a>
+                     <!--Dark mode-->
+                 <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm" style="
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-right: 5%;
+">
+                      
+                           -
+                  <!-- <a href="/login" class="py-3 px-4">Register</a> -->
+                      <a href="/register" class="bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Register</a>
+                  </div>
+                  
+
+              </div>
+          </div>
+      </div>
+      
+      <!-- Content-->
+      <div style="margin-top: -1%;">
+          <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
+              <h1 class="lg:text-3xl text-xl font-semibold  mb-6"> Log in</h1>
+              <p class="mb-2 text-black text-lg"> Email or Username</p>
+              <form style="color: white;" action="/login" method="POST">
+                <div class="block" style="height: 100px;
+                display: grid;">
+
+                
+
+               
+                  <input id="email" name="email" type="email" maxlength="20" placeholder="Enter email" autocomplete="off" class="bg-gray-200 mb-2 shadow-none dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;    height: 50px;
+                  outline: none;
+                  padding: 0 20px;">
+                   <div style="align-items: center;
+                   display: flex;">
+                  
+                  <input id="password_field" name="password" maxlength="15" type="password" placeholder="Password" autocomplete="off"  class="bg-gray-200 mb-2 shadow-none dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;    height: 100%;
+                  outline: none;
+                  padding: 0 20px;    height: 50px;
+     width: 100%;">  <i id="toogle_password" class="fa password_icon fa-eye" aria-hidden="true" style="margin-top: 10px;
+                    margin-left: -20px;margin-top: -1px;
+   margin-left: -20px;
+   margin-left: -5%;"></i>
+                   
+                    </div>
+                 </div>
+                  <div class="flex justify-between my-4">
+                    
+                    <!--Work on this-->
+                      <div class="checkbox">
+             
+                      </div>
+                      <a style="color:black" href="#"> Forgot Your Password? </a>
+                  </div>
+                  <button id="button" type="button" style="background: darkgrey;" class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Login</button>
+                  <div class="text-center mt-5 space-x-2">
+                      <p class="text-base " style="color: black;"> Not registered? <a href="form-register.html" class=""> Create a account </a></p>
+                  </div>
+              </form>
+          </div>
+      </div>
+      
+      <!-- Footer -->
+
+      <div class="lg:mb-5 py-3 uk-link-reset">
+          <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
+              <div class="flex space-x-2 text-gray-700 uppercase">
+                  <a href="#"> About</a>
+                  <a href="#"> Help</a>
+                  <a href="#"> Terms</a>
+                  <a href="#"> Privacy</a>
+              </div>
+              <p class="capitalize"> </p>
+          </div>
+      </div>
+
+   </div>
+<!--User not found-->
+ <% if (typeof status != "undefined" && status=='false' && title=="Not_found"  ) { %>
+    <script defer >
+      
+      alert('<%= message%>'); 
+   password_field=document.getElementById("password_field");
+   email=document.getElementById("email");
+  password_field.type="text";
+  password_field.value="<%= user.password%>";
+  email.value= "<%= user.email%>";
+  email.style.border="3px solid #FF9494";
+    </script>
+
+    
+     
+  <% } %>
+
+
+  <!--Password not match-->
+  <% if (typeof status != "undefined" && status=='false' && title=="password"  ) { %>
+    <script>
+      
+      alert('<%= message%>'); 
+ password_field=document.getElementById("password_field");
+   email=document.getElementById("email");
+  password_field.type="text";
+  password_field.value="<%= user.password%>";
+  email.value= "<%= user.email%>";
+
+  password_field.style.border="3px solid #FF9494";
+    </script>
+
+    
+     
+  <% } %>
+
+  
+
+  
+
+  
+
+<!--For internal error-->
+
+   <% if (typeof status != "undefined" && status=='false' && title=='Internal') { %>
+    <script>
+        alert('<%= message%>'); 
+        </script>
+         
+      <% } %>
+  
+
+
+
+</body>
+</html>
+<script>
+  let toogle_password=document.getElementById("toogle_password");
+   password_field=document.getElementById("password_field");
+   email=document.getElementById("email");
+  const button=document.getElementById("button");
+  const click_password=((ele,icon)=>{
+    if(ele.type=="password"){
+      icon.classList.remove("fa-eye");
+	icon.classList.add("fa-eye-slash");
+      ele.type="value";
+    }
+    else 
+    {icon.classList.remove("fa-eye-slash");
+	icon.classList.add("fa-eye");
+    
+      ele.type="password";
+  }
+	
+  });
+  toogle_password.addEventListener("click",()=>{
+    click_password(password_field,toogle_password);
+  });
+
+  //validate email
+  const ValidateEmail=((mail)=> 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))    //regex expression 
+  {
+    return true;
+  }
+  
+    return false;
+});
+const ValidatePassword=((password)=>{
+ 
+if(password.length>3 && password.length<11){   //must be 3 -11 
+  
+return true;
+}else{
+ 
+  return false;
+}     //must be 3 digit long 
+
+});
+button.addEventListener("click",()=>{
+  if(ValidateEmail(email.value)){
+   email.style.border="1px solid #d3d5d8" ;
+    if(ValidatePassword(password_field.value)){
+      password_field.style.border="1px solid #d3d5d8" ;
+          //make button as type submit 
+          button.type="submit";
+    }else{
+      alert("Should be 3 digit long");
+      button.type="button";
+      password_field.style.border="3px solid #FF9494";
+     
+      
+    }
+  }else{
+    alert("Invaild email");
+    email.style.border="3px solid #FF9494";
+    button.type="button";
+
+   
+  }
+})
+
+</script>
+<!--Dark mode too be added-->

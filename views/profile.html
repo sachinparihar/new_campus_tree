@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="./node_modules/cropperjs/dist/cropper.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body{
+    background-color: white;
+      padding: 0;
+      margin: 0;
+    
+    }
+    
+    .navbar{
+      background-color: black;
+    }
+    
+    
+    /* NOTE: Cover */
+    .profile-row{
+    margin-right:0;
+    }
+    .col-cover{
+    margin-left: -3rem;
+    }
+    .cover {
+      max-width: 60rem;
+      border-radius: 0.5rem;
+      margin-left: 7rem;
+      margin-top: 2rem;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    #cover-img{
+      width: 100%;
+      border-radius: 0.5rem;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .cover-edit-icon-label{
+      position: relative;
+      right: 18.5rem;
+      bottom: 1rem;
+    }
+  .cover-edit-icon{
+    position: relative;
+    color: white;
+  left: 1rem;
+    bottom: 2rem;
+    cursor: pointer;
+    
+  }
+ 
+
+    @media (min-width: 10rem) and (max-width: 40rem) {
+      /* … */
+      body{
+        background-color: red;
+      }
+    }
+    /* NOTE: Profile */
+    .pic-name-col{
+      text-align: center;
+      width: 10rem;
+      margin: 1rem;
+      border: none;
+    
+    }
+    .profile-row-under{
+      max-width: 60rem;
+      border-radius: 0.5rem;
+      margin: 0;
+      padding: 0;
+      margin-left: 7rem;
+      margin-top: 0.5rem;
+      border: 0.1rem solid #C0C0C0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      margin-bottom: 1rem;
+    
+    
+    }
+    .profile-img{
+      border-radius: 50%;
+      max-width: 10rem;
+      border: 0.1rem solid #C0C0C0;
+    
+    }
+    .name{
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+    .college-field-col{
+    padding: 0;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-left: 4rem;
+    }
+    
+    .field{
+      font-size: 1rem;
+      font-weight: 500;
+    
+    
+    }
+    .college{
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .skills-div{
+      width: 14rem;
+    }
+    .skill{
+      background-color: #c0c0c0;
+      border-radius: 0.2rem;
+      padding: 0.4rem;
+      color: black;
+      text-align: center;
+      margin: 0.2rem;
+      display: inline-block;
+    }
+    
+    /* NOTE: About div */
+    .about-div{
+      background-color: #c0c0c0;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    
+    .others-col{
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid #c0c0c0;
+      height: 35rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align: center;
+    
+    
+    
+    }
+    
+    .others-profile-col{
+      text-align: center;
+      background-color: #c0c0c0;
+      border-radius: 0.5rem;
+      border: 0.2rem solid White;
+      margin: 0.2rem;
+    }
+    .other-profile-name{
+      font-weight: 300;
+      font-size: 1rem;
+    }
+    
+    .other-profile-img{
+      border-radius: 50%;
+      max-width: 5rem;
+      border: 0.1rem solid #C0C0C0;
+    }
+    
+    
+    .friends-number-link{
+      text-decoration: none;
+      font-size: 1rem;
+    
+    }
+    .other-follow-btn{
+      border-radius: 0.5rem;
+      background-color:  #E18A07;
+      padding: 0rem 0.5rem;;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+  </head>
+<body>
+<!-- NOTE: Navbar -->
+<!-- <<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#campus-tree">Campus Tree</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggle" aria-controls="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon ticon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav-toggle">
+        <div class="navbar-nav">
+          <a class="nav-link "  href="#">Home</a>
+          <a class="nav-link active"aria-current="page" href="#">Profile</a>
+          <a class="nav-link" href="#">Platform</a>
+          <a class="nav-link" href="#">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>> -->
+
+
+<!-- NOTE: Profile  -->
+<div class="row profile-row">
+  <div class="col-md-8 col-cover">
+    <div class="cover">
+      <img id="cover-img"src="./images/coverImage.jpg" alt="">
+     <input type="file"id="cover-file" style="visibility: hidden ">
+     <label for="cover-file" class="cover-edit-icon-label"><i class="fa-solid fa-pen-to-square cover-edit-icon"></i></label>
+    </div>
+  
+
+    <div class=" row profile-row-under">
+      <div class="col-sm-6 pic-name-col">
+        <img class="profile-img"src="images/profile.jpg" alt="">
+        <div class="name">
+          Ravi
+        </div>
+      </div>
+    <div class="col-sm-6 college-field-col">
+        <div class="field container">
+          Ravi Sinhmar
+        </div>
+        <div class="college container">
+          GJU Hisar,Haryana
+        </div>
+      <div class="skills-div">
+        <div class="skill">
+          HTML
+        </div>
+        <div class="skill">
+          CSS3
+        </div>
+        <div class="skill">
+          JS
+        </div>
+        <div class="skill">
+          Bootstrap
+        </div>
+        <div class="skill">
+          DOM
+        </div>
+        <div class="skill">
+          Node.js
+        </div>
+      </div>
+    </div>
+    <div class="about-div">
+      <h4 class="about-heading">About</h4>
+      I am a dedicated young student. Currently I am working a project of designing a website.Along with that I am learnig english speaking by parting some time.
+    </div>
+    </div>
+  </div>
+  <div class="col-md-4 others-col container scrol">
+    <div class="row ">
+      <div class="col others-profile-col">
+        <img class="other-profile-img"src="images/profile.jpg" alt="">
+        <div class="other-profile-name">
+          Ravi Sinhmar
+        </div>
+        <div class="friends-number">
+          <a class="friends-number-link"href="#">78 Friends</a>
+        </div>
+        <button class="other-follow-btn"type="button" name="button">Follow</button>
+      </div>
+      <div class="col others-profile-col">
+        <img class="other-profile-img"src="images/profile.jpg" alt="">
+        <div class="other-profile-name">
+          Ravi Sinhmar
+        </div>
+        <div class="friends-number">
+          <a class="friends-number-link"href="#">77 Friends</a>
+        </div>
+        <button class="other-follow-btn"type="button" name="button">Follow</button>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col others-profile-col">
+        <img class="other-profile-img"src="images/profile.jpg" alt="">
+        <div class="other-profile-name">
+          Ravi Sinhmar
+        </div>
+        <div class="friends-number">
+          <a class="friends-number-link"href="#">78 Friends</a>
+        </div>
+        <button class="other-follow-btn"type="button" name="button">Follow</button>
+      </div>
+      <div class="col others-profile-col">
+        <img class="other-profile-img"src="images/profile.jpg" alt="">
+        <div class="other-profile-name">
+          Ravi Sinhmar
+        </div>
+        <div class="friends-number">
+          <a class="friends-number-link"href="#">77 Friends</a>
+        </div>
+        <button class="other-follow-btn"type="button" name="button">Follow</button>
+      </div>
+    </div>
+<div class="row ">
+  <div class="col others-profile-col">
+    <img class="other-profile-img"src="images/profile.jpg" alt="">
+    <div class="other-profile-name">
+      Ravi Sinhmar
+    </div>
+    <div class="friends-number">
+      <a class="friends-number-link"href="#">78 Friends</a>
+    </div>
+    <button class="other-follow-btn"type="button" name="button">Follow</button>
+  </div>
+  <div class="col others-profile-col">
+    <img class="other-profile-img"src="images/profile.jpg" alt="">
+    <div class="other-profile-name">
+      Ravi Sinhmar
+    </div>
+    <div class="friends-number">
+      <a class="friends-number-link"href="#">77 Friends</a>
+    </div>
+    <button class="other-follow-btn"type="button" name="button">Follow</button>
+  </div>
+</div>
+  <div class="row">
+    <div class="col others-profile-col">
+      <img class="other-profile-img"src="images/profile.jpg" alt="">
+      <div class="other-profile-name">
+        Ravi Sinhmar
+      </div>
+      <div class="friends-number">
+        <a class="friends-number-link"href="#">78 Friends</a>
+      </div>
+      <button class="other-follow-btn"type="button" name="button">Follow</button>
+    </div>
+    <div class="col others-profile-col">
+      <img class="other-profile-img"src="images/profile.jpg" alt="">
+      <div class="other-profile-name">
+        Ravi Sinhmar
+      </div>
+      <div class="friends-number">
+        <a class="friends-number-link"href="#">77 Friends</a>
+      </div>
+      <button class="other-follow-btn"type="button" name="button">Follow</button>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col others-profile-col">
+        <img class="other-profile-img"src="images/profile.jpg" alt="">
+        <div class="other-profile-name">
+          Ravi Sinhmar
+        </div>
+        <div class="friends-number">
+          <a class="friends-number-link"href="#">78 Friends</a>
+        </div>
+        <button class="other-follow-btn"type="button" name="button">Follow</button>
+      </div>
+      <div class="col others-profile-col">
+        <img class="other-profile-img"src="images/profile.jpg" alt="">
+        <div class="other-profile-name">
+          Ravi Sinhmar
+        </div>
+        <div class="friends-number">
+          <a class="friends-number-link"href="#">77 Friends</a>
+        </div>
+        <button class="other-follow-btn"type="button" name="button">Follow</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/1b26aa43df.js" crossorigin="anonymous"></script>
+  <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
+  <script src="index.js"></script>
+
+
+  </html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div style="
+    /* margin-top: 0px; */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* width: 100vw; */
+    padding-top: 5%;
+">
+        
+   
+    <div id="content" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    
+    <div style="
+    width: 330px;
+    height: auto;
+    border: 1px solid #d8d8d8;
+    position: relative;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    /* font-family: &quot;ViRegular&quot;,&quot;Helvetica&quot;,&quot;Arial&quot;,sans-serif; */
+    padding: 18px 0;
+    color: #2f3043;
+    margin-bottom: 14px;
+    display: flex;
+">
+        <div style="
+    margin: 0;
+    width: 100%;
+">
+            <div>
+                <label for="code" style="
+    color: #797a86;
+    font-size: 12px;
+    line-height: 14px;
+    pointer-events: none;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    background: #fff;
+    top: -8px;
+    left: 15px;
+    height: auto;
+    width: auto;
+    padding: 0 7px;
+    z-index: 1;
+    margin: 0;
+">enter a valid OTP</label><div style="
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+">
+                                    <form id="FORMID" action="/otp" method="POST" autocomplete="off" style="
+    width: 100%;
+    padding: 0;
+    width: 100%;
+    max-width: 165px;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-template-rows: auto; */
+">
+                                        <input type="tel" id="ist_input" placeholder="−" maxlength="1" onkeypress="return /[0-9]/i.test(event.key)" autocomplete="off" style="
+    font-size: 36px;
+    outline: aquamarine;
+    border: 2px solid;
+    line-height: 43px;
+    font-family: 'ViBold',Helvetica,Arial,sans-serif;
+    width: 100%;
+    color: #2f3043;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    text-align: left;
+">
+                                        <input type="tel" id="second_input" placeholder="−" maxlength="1" onkeypress="return /[0-9]/i.test(event.key)" autocomplete="off" style="
+    font-size: 36px;
+    line-height: 43px;
+    font-family: 'ViBold',Helvetica,Arial,sans-serif;
+    width: 100%;
+    color: #2f3043;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    text-align: left;
+    outline: none;
+">
+                                        <input type="tel" id="third_input" placeholder="−" maxlength="1" autocomplete="off" onkeypress="return /[0-9]/i.test(event.key)" style="
+    font-size: 36px;
+    line-height: 43px;
+    font-family: 'ViBold',Helvetica,Arial,sans-serif;
+    width: 100%;
+    color: #2f3043;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    text-align: left;
+    outline: none;
+">
+                                        <input type="tel" id="fourth_input" placeholder="−" maxlength="1" autocomplete="off" style="
+    font-size: 36px;
+    line-height: 43px;
+    font-family: 'ViBold',Helvetica,Arial,sans-serif;
+    width: 100%;
+    color: #2f3043;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    text-align: left ;
+    outline: none;
+">
+           
+<input name="otp" style="display: none;" id="main_input">
+
+<!-- <button type="submit" id="verifyOtp" form="FORMID" class="btn verifyOtp px-4 miDarkbtn" style="
+    /* display: flex; */
+    background: #d5d6d9 !important;
+    /* border-color: #d5d6d9 !important; */
+    color: #fff;
+    /* opacity: 1; */
+    width: 150px;
+    height: 50px;
+    /* font-size: 16px; */
+    /* line-height: 20px; */
+    border-radius: 25px;
+    /* color: #fff; */
+    /* font-family: &quot;ViMedium&quot;,&quot;Helvetica&quot;,&quot;Arial&quot;,sans-serif; */
+    /* margin-right: 40px; */
+">verify</button> -->
+</form>
+                                </div>
+</div>
+</div>
+<i class="fa fa-repeat" aria-hidden="true" style="
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: -9%;
+"></i>
+</div>
+</div><div id="text_section" style="
+    display: flex;
+    justify-content: center;
+"><p>OTP has been sent to your email<span> </span><span class="dynamicNumber"><%=  %> </span></p></div>
+<div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+">
+
+
+<button id="button"  type="button" >
+Verify
+</button>
+</div>
+    </div>
+<!-- Code injected by live-server -->
+
+
+
+<!-- Code injected by live-server -->
+</body>
+</html>
+
+
+<script>
+
+    //add validations
+let ist_input=document.getElementById("ist_input");
+let second_input=document.getElementById("second_input");
+let third_input=document.getElementById("third_input");
+let fourth_input=document.getElementById("fourth_input");
+let main_input=document.getElementById("main_input");
+let verifyOtp=document.getElementById("verifyOtp");
+
+//^[0-9]*$
+// verifyOtp.addEventListener("click",()=>{
+//     if(ist_input.value!="" && second_input.value!="" && third_input.value!="" && fourth_input.value != ""){
+
+ 
+// main_input.value=ist_input.toString()+second_input.toString()+third_input.toString()+fourth_input.toString();
+// verifyOtp.type="Submit";
+
+// }
+
+// })
+
+//logics
+//pending ::: 
+
+
+//validations
+let button=document.getElementById("button");
+button.addEventListener("click",()=>{
+    if(ist_input.value!=" " && second_input.value!="" && third_input.value!="" && fourth_input.value!=""){
+main_input.value=ist_input.value+second_input.value+third_input.value+fourth_input.value;
+button.setAttribute("form","FORMID");
+button.type="submit";
+}else{
+
+    alert("Invalid Otp");
+}
+})
+
+
+</script>
+
+
+
+<!--Otp complete only verfication-->
+<!--Connect -->

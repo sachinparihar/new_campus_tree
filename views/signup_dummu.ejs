@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../public/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  <title>Document</title>
+  <style>
+    .content1{
+  height: 39rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form{
+  margin-top: -10px;
+}
+.ist{
+width: 50%;
+
+}.box1{
+  display:flex;
+
+}
+.second{
+  margin-left: 3%;
+}
+#box_inside{
+  display:flex;
+  
+}.select{
+  padding: 0.3rem;
+    border-color: #c0c0c0;
+    width:16rem
+}
+.third{
+  height: 60px;
+  display: inline-grid;
+
+}
+/*Applying ...*/
+.form-control{
+  border-radius: 0.50rem;
+}
+.social_icon{
+  font-size: 1.5em;
+}.anchor{
+  padding: 10px;
+}
+  </style>
+</head>
+<body>
+ 
+
+  <div class="content content1">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <img src="https://preview.colorlib.com/theme/bootstrap/login-form-07/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+    </div>
+    <div class="col-md-6 contents">
+    <div class="row justify-content-center">
+    <div class="col-md-8" style="width: 100%;">
+    <div class="mb-4">
+    <h3>Sign Up</h3>
+    <p class="mb-4"></p>   <!--Content -->
+    </div>
+    <form action="#" method="post" id="form">
+    
+      <div class="box1"> 
+    <div class="form-group first ist" >
+    <label for="username">Firstname</label>
+    <input type="text" class="form-control" id="username" name="firstname">
+    </div>`
+    <div class="form-group first ist second"  style="">
+      <label for="username">LastName</label>
+      <input type="text" class="form-control" id="username2" name="lastname">
+      </div>
+      </div>
+
+   
+        
+<div class="box1" style="height: 60px;">
+   
+    <div class="form-group last mb-4 ist">
+    <label for="password" >Password</label>
+    <div id="box_inside">
+
+    
+    <input type="password" class="form-control passwords" name="password" >
+    <i   class="fa fa-eye password_icon" aria-hidden="true" style="margin-top: 10px;
+    margin-left: -20px;"></i>
+  </div>
+ 
+    </div>
+    
+    <div class="form-group last mb-4 ist second">
+      <label for="password">Confirm-Password</label>
+      <div id="box_inside">
+      <input type="password"  class="form-control confirm" name="confirm_password">
+      <i   class="fa fa-eye confirm_icon" aria-hidden="true" style="margin-top: 10px;
+    margin-left: -20px;"></i>
+      </div>
+    </div>
+    </div>
+      
+
+      <div class="box1" style="height: 60px;">
+   
+        <div class="form-group last mb-4 ist">
+          
+        <label for="email">Email</label>
+        
+      <input type="email" class="form-control " name="email" >
+        
+     
+        </div>
+        
+        <div class="form-group last mb-4 ist second third">
+          
+          <label for="name">City</label>
+         <select name="city"  class="select" name="city">
+
+         </select>
+          
+          </div>
+        </div>
+        
+
+          
+      <div class="box1">
+   
+        <div class="form-group last mb-4 ist">
+          
+        <label for="">College</label>
+        
+      <input type="" class="form-control " name="college" >
+        
+     <option>
+       
+     </option>
+        </div>
+        
+        <div class="form-group last mb-4 ist second third">
+          
+          <label for="name">Interest</label>
+  <select name="interest">
+    <option>Coding</option>
+    <option>Coding</option>
+  </select>
+          
+          </div>
+        </div>
+</div>
+</div>
+
+
+    <div class="d-flex mb-5 align-items-center">
+    <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+    <input type="checkbox" checked="checked" />
+    <div class="control__indicator"></div>
+    </label>
+    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+    </div>
+    <input type="submit" value="Log In" class="btn btn-block btn-primary">
+    <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span>
+    <div class="social-login">
+    <a href="#" class="facebook anchor">
+    <span class="icon-facebook mr-3 "></span>
+    <i class="fa fa-facebook social_icon" style="font-size: 1.5em;"></i>
+    </a>
+    <a href="#" class="twitter anchor">
+    <span class="icon-twitter mr-3" ></span>
+    <i class="fa fa-twitter social_icon" style="font-size: 1.5em;"></i>
+    </a>
+    <a href="#" class="google anchor">
+    <span class="icon-google mr-3"></span>
+    <i class="fa fa-google social_icon " style="font-size: 1.5em;"></i>
+    </a>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>
+<script>
+  /******         ***/
+
+  //password and confirm password input fields
+const password_field=document.querySelector(".passwords");
+const confirm_field=document.querySelector(".confirm");
+
+//icons of passwords and confirm password
+const password_icon=document.querySelector(".password_icon");
+const confirm_icon=document.querySelector(".confirm_icon");
+
+	const click_password=((ele,icon)=>{
+    if(ele.type=="password"){
+      icon.classList.remove("fa-eye");
+	icon.classList.add("fa-eye-slash");
+      ele.type="value";
+    }
+    else 
+    {icon.classList.remove("fa-eye-slash");
+	icon.classList.add("fa-eye");
+    
+      ele.type="password";
+  }
+	
+  });
+  password_icon.addEventListener("click",()=>{
+    click_password(password_field,password_icon);
+  });
+  confirm_icon.addEventListener("click",()=>{
+    console.log("clickable!!!!");
+    click_password(confirm_field,confirm_icon);
+  })
+//*****************///
+
+
+  /*let icon=document.getElementsByClassName("icon");
+	let password=document.getElementsByClassName("passwords");
+icon.addEventListener("click",()=>{
+
+
+if(password.type=="password"){
+	icon.classList.remove("fa-eye");
+	icon.classList.add("fa-eye-slash");
+	password.type="text";
+
+}
+	else{
+		password.type="password";
+		icon.classList.remove("fa-eye-slash");
+	icon.classList.add("fa-eye");
+	}
+});*/
+
+
+//cities apii
+const city_api='./city.json';
+let select=document.querySelector('select');
+fetch(city_api).then((data)=>{
+return data.json();
+}).then((data)=>{
+  data.city.forEach(element => {
+    let ele=document.createElement('option');
+    ele.innerHTML=element;
+    select.appendChild(ele);
+  });
+  console.log(data.city[10]);
+}).catch((err)=>{
+console.log(err);
+});
+
+</script>

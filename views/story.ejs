@@ -1,0 +1,579 @@
+<html lang="en"><head>
+    
+    <title>Registration</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="cropperjs/dist/cropper.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+
+
+        * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+.stories {
+scrollbar-width: none;
+}
+
+.allstory::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+
+}
+.allstory a{
+  text-decoration: none;
+  color: black;
+}
+
+.bg-active {
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+      .nav-link{
+        color: white;
+        font-size: 1.3rem;
+      }
+      .active{
+        
+        color: rgb(230, 207, 11);
+      }
+
+      .card-box {
+padding: 2px;
+border-radius: 1rem;
+margin-bottom: 3px;
+background-color: #fff;
+border: 0.5rem solid black;
+}
+
+.social-links li a {
+border-radius: 50%;
+color: rgba(121, 121, 121, .8);
+display: inline-block;
+height: 20px;
+line-height: 5px;
+border: 2px solid rgba(121, 121, 121, .5);
+text-align: center;
+width: 20px
+}
+
+.social-links li a:hover {
+color: #797979;
+border: 2px solid #797979
+}
+.thumb-lg {
+height: 50px;
+width: 50px;
+}
+.img-thumbnail {
+padding:2px;
+background-color: #fff;
+border: 1px solid #dee2e6;
+border-radius: .30rem;
+max-width: 100%;
+height: auto;
+}
+.text-pink {
+color: #ff679b!important;
+}
+
+.text-muted {
+color: #98a6ad!important;
+}
+
+.content h4 {
+line-height: 10px;
+font-size: 12px;
+}
+
+
+.chellenges-profile-container{
+overflow: auto;
+white-space: nowrap;
+width: 100%;
+padding: 1rem;
+
+}
+.chellenges-profile-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.pbox{
+  display: inline-block;
+  width: 15rem;
+  height: 15rem;
+  margin: 0.5rem;
+}
+
+
+
+.pimgdiv{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 3rem;
+  height:3rem;
+ margin-bottom: 1rem;
+}
+.pimg{
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+.creategroup,.groupname{
+  margin-left: 93%;
+}
+
+      .story {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.user-profile {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.user-profile img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.username {
+margin-top: 5px;
+font-size: 1.2rem;
+}
+
+.story-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 500px;
+}
+
+.story-content p {
+margin: 0;
+padding: 10px;
+font-size: 1.2rem;
+text-align: center;
+}
+
+.story-content img {
+width: 100%;
+max-width: 500px;
+margin: 10px 0;
+}
+
+.story-duration {
+margin-top: 10px;
+padding: 5px;
+background-color: rgba(0,0,0,0.5);
+color: #fff;
+font-size: 1rem;
+border-radius: 5px;
+}*
+
+
+.stories {
+scrollbar-width: none;
+}
+.bg-active {
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+
+img{
+  
+
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 100%
+}li{
+    list-style: none;
+}
+
+    </style>
+  </head>
+
+  <body class="vsc-initialized" data-new-gr-c-s-check-loaded="14.1101.0" data-gr-ext-installed=""><div id="heading" style="display: block;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="
+        /* position: fixed; */
+        /* display: flex; */
+        /* width: 100%; */
+    ">
+        <div class="container-fluid">
+          
+          <a class="navbar-brand" href="#campus-tree">Campus Tree </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggle" aria-controls="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon ticon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav-toggle">
+            <div class="navbar-nav">
+              <a class="nav-link " href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#"> Profile</a>
+              <a class="nav-link" href="#">Chellenges</a>
+              <a class="nav-link" href="#">Friends</a>
+              <a class="nav-link" href="#">Community</a>
+            </div>
+          </div>
+    
+          <div id="buttons" style="
+        width: 100px;
+        display: flex;
+        justify-content: space-evenly;
+    ">
+              <i class="fa fa-user" id="users" aria-hidden="true" style="
+        color: azure;
+    "> </i>
+    
+              
+                <i class="fa fa-sign-out" aria-hidden="true" style="
+        color: azure;
+    "></i>
+              
+            </div>
+         
+        </div>
+      </nav>
+    
+    
+      <section class="story-section bg-gray-800 w-screen h-screen flex justify-center items-center" style="
+    display: flex;
+        justify-content: center;
+        width: 94%;
+        margin-right: auto;
+        background: rebeccapurple;
+        margin-left: auto;
+        border-radius: 1rem;
+        margin-top: 1rem;
+    ">
+      <ul class="allstory w-full md:w-3/4 m-2 lg:w-1/2 flex justify-between items-start mb-8 space-x-3 overflow-x-scroll stories bg-white p-4 rounded drop-shadow-xl" style="
+    display: flex;
+    /* justify-content: center; */
+    overflow-x: scroll;
+    gap: 19px;
+    ">
+        <li class="flex flex-none flex-col items-center space-y-1" style="/* display: flex; */list-style-type: none;list-style: none;list-style-type: none;">
+          <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full" style="/* display: flex; */">
+            <a id="my_story" href="#" class="block bg-white p-1 rounded-full relative" style="">
+              <img src="https://images.unsplash.com/photo-1579105728744-9d6b14a45389?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=683&amp;q=80" alt="Omid Armin" class="w-16 h-16 rounded-full object-cover" style="">
+              <label class="custom-file-upload" style="
+      display: flex;
+      width: 100%;
+      justify-content: end;
+      align-items: end;
+    ">
+    <input name="file" id="file" class="input-file" type="file" accept="image/png, image/gif, image/jpeg ,image/mp4 " style="display: none;width: 100%;">
+    <i id="upload" class="fa fa-plus" onclick="" aria-hidden="true" style="text-align: center;/* border: 2px solid; */cursor: pointer;text-align: center;color: cornflowerblue;font-size: 18px;border-radius: 100%;border: 2px solid;width: 18px;height: 18px;background: black;margin-top: -34%;"></i>
+
+
+
+  </label>
+            </a>
+          </div>
+          <a href="#" class="text-xs text-slate-800 font-semibold" style="
+    margin-left: 16%;
+    ">Your story</a>
+        </li>
+      
+    <li class="flex flex-none flex-col items-center space-y-1" style="
+    /* list-style: none; */
+    ">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full" style="
+    ">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1626071466175-79ab723e9fdd?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=759&amp;q=80" alt="Tatiana Pavlova" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800" style="display: block;">tatiana_pavlova</a>
+    </li>
+    
+    <li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80" alt="Aiony Haust" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">aiony_haust</a>
+    </li>
+    
+    <li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80" alt="Aiony Haust" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">aiony_haust</a>
+    </li><li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80" alt="Aiony Haust" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">aiony_haust</a>
+    </li><li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80" alt="Aiony Haust" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">aiony_haust</a>
+    </li><li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=689&amp;q=80" alt="Joel Mott" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">joel_mott</a>
+    </li>
+    
+    <li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1504363081893-c8226db66926?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" alt="Caique Silva" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">caique_silva</a>
+    </li>
+    
+    <li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1644456070980-a6be4db8910a?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" alt="Jemima Wood" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">jemima_wood</a>
+    </li>
+    
+    <li class="flex flex-none flex-col items-center space-y-1">
+    <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+    <a href="#" class="block bg-white p-1 rounded-full relative">
+      <img src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=880&amp;q=80" alt="Leio McLaren" class="w-16 h-16 rounded-full object-cover">
+    </a>
+    </div>
+    <a href="#" class="text-xs text-slate-800">leio_mclaren</a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section class="story-section bg-gray-800 w-screen h-screen flex justify-center items-center" style="
+    display: flex;
+        justify-content: center;
+        width: 94%;
+        margin-right: auto;
+        background: rebeccapurple;
+        margin-left: auto;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        height: 50rem;
+    ">
+      
+    
+    
+    
+      <section class="story-section bg-gray-800 w-screen h-screen flex justify-center items-center" style="
+      display: flex;
+          justify-content: center;
+          width: 30%;
+          margin-right: auto;
+          background: white;
+          margin-left: auto;
+          border-radius: 1rem;
+          margin-top: 1rem;
+          height: 22rem;
+      ">
+        <div></div>
+      </section>
+      <section class="story-section bg-gray-800 w-screen h-screen flex justify-center items-center" style="
+      display: flex;
+          justify-content: center;
+          width: 30%;
+          margin-right: auto;
+          background: white;
+          margin-left: auto;
+          border-radius: 1rem;
+          margin-top: 1rem;
+          height: 22rem;
+      ">
+        
+      </section>
+      <section class="story-section bg-gray-800 w-screen h-screen flex justify-center items-center" style="
+      display: flex;
+          justify-content: center;
+          width: 30%;
+          margin-right: auto;
+          background: white;
+          margin-left: auto;
+          border-radius: 1rem;
+          margin-top: 1rem;
+          height: 22rem;
+      ">
+        
+    
+      </section>
+    
+    
+    </section>
+    
+    
+    
+    
+    </div>
+    
+    <section id="story-section" class=" story-section bg-gray-800 w-screen h-screen flex justify-center items-center" style="display: flex; justify-content: center; width: 54%; border-radius: 0.5rem; background: rebeccapurple; height: 89vh; margin: 3rem auto;">
+        
+    <div id="cross-story" style="
+        width: 2rem;
+        /* display: inline; */
+        height: 2rem;
+        /* background: red; */
+        margin-left: 38rem;
+        background: black;
+        /* margin: 2rem; */
+    ">
+        <i id="close" class="fa fa-window-close" style="
+        /* margin: 2rem; */
+        color: white;
+        /* font-size: 2rem; */
+        /* margin: inherit; */
+    "></i>
+    </div>
+      </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://kit.fontawesome.com/1b26aa43df.js" crossorigin="anonymous"></script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
+
+<script>
+//   let close=document.getElementById("close");
+
+// let heading=document.getElementById("heading"); 
+// let story_section=document.getElementById("story-section"); close.addEventListener("click",()=>{story_section.style.display="none"; heading.style.display="block";});
+// let my_story=document.getElementById("my_story");
+
+// close.addEventListener("click",()=>{ heading.style.display="block";story_section.style.display="flex"; })
+
+// my_story.addEventListener("click",()=>{ heading.style.display="none";story_section.style.display="flex"; })
+
+
+//upload story
+
+
+let input=document.getElementById("upload");
+
+
+
+  input.addEventListener("change",(e)=>{
+//click function
+
+let url="";
+
+let own_stories={};
+
+const reader=new FileReader();
+console.log(reader);
+reader.readAsDataURL(input.files[0]);
+
+
+coverFile.addEventListener("change", (e) => {
+       if (e.target.files.length) {
+      
+         // start file reader
+         const reader = new FileReader();
+         reader.onload = (e) => {
+           if (e.target.result) {
+             // create new image
+             let img = document.createElement("img");
+             img.id = "croping-image";
+             img.src = e.target.result;
+             // clean result before
+             console.log(e.target.result);
+
+           }
+
+reader.addEventListener("load", ()=>{
+ const newImage=new image();
+ console.log(reader.result);
+})
+  })
+
+
+</script>
