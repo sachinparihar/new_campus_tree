@@ -16,6 +16,8 @@ const http = require('http').createServer(app)
 const connection = require("./connection/db");
 const aChatSchema = require("./models/achat");
 const OnlySchema = require("./models/chatArray");
+const user=require("./routers/user");
+
 //const registerSchema = require("./models/register");
 
 const bodyParser = require('body-parser');
@@ -31,7 +33,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //   Ejs Template Added
 app.set('view engine', 'ejs');
-
 
 // Port Listening
 const PORT = process.env.PORT || 3000
@@ -286,7 +287,7 @@ socket.on('message',  (msg) => {
 
 
 // const http = require('http').createServer(app);
-const user=require("./user");
+
 const profile=require("./routers/profile");
 
 const story=require("./routers/stories");

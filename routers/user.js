@@ -1,8 +1,7 @@
 const router=require("express").Router();
 const cookieParser=require("cookie-parser");
-const register=require("./models/registers");
-const sendmail=require("./modules/sendmail");
-const hashing=require("./modules/hashing");
+const register=require("../models/registers");
+const sendmail=require("../modules/sendmail");
 const bcrypt=require("bcrypt");
 //demo page 
 
