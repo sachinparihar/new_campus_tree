@@ -180,19 +180,19 @@ else{
 
 
 })
-profile.get("/profile",auth,async(req,res)=>{
-    try{
-    const otherUsers=await register.find({});
-     console.log(otherUsers);
-      // console.log(auth);
-console.log(req.data);
-        res.render("profile",{user:req.data,otherUsers:otherUsers});
-    }
-   catch(err){
-       console.log(err);
-       res.send(err);
-   } 
-})
+// profile.get("/profile",auth,async(req,res)=>{
+//     try{
+//     const otherUsers=await register.find({});
+//      console.log(otherUsers);
+//       // console.log(auth);
+// console.log(req.data);
+//         res.render("profile",{user:req.data,otherUsers:otherUsers});
+//     }
+//    catch(err){
+//        console.log(err);
+//        res.send(err);
+//    } 
+// })
 
 
 

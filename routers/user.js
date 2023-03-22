@@ -12,8 +12,13 @@ const bcrypt=require("bcrypt");
 
 router.get("/register",(req,res)=>{
     //question if someone is at signup is we want to check the token 
-    res.cookie("id",'');
-    res.render("register",{status:"true"});
+    try{
+        res.cookie("id",'');
+        res.render("register",{status:"true"});
+    }catch(err){
+        res.send({status:false,message:"Something went wrong ",title:"wrong"});
+    }
+   
 });
 
 
@@ -143,7 +148,7 @@ router.post("/otp",async(req,res)=>{
     if(data){
         console.log(req.cookies.id); 
         res.cookie("id",data._id);
-        res.redirect("/profile");
+        res.redirect("/myprofile");
 
         //write fronetne for that
 
@@ -167,9 +172,9 @@ router.post("/otp",async(req,res)=>{
 
 
 
-router.get("/signup2",(req,res)=>{
-    res.render("signup2");
-})
+// router.get("/signup2",(req,res)=>{
+//     res.render("signup2");
+// })
 
 module.exports=router;
 
